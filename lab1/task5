@@ -1,0 +1,41 @@
+/*
+ Total Bill Calculation
+Story:
+A customer buys 3 items:
+Item 1: 120 BDT
+Item 2: 250 BDT
+Item 3: 90 BDT
+Task:
+Write a Java program to calculate the total bill.
+Formula:
+Total = item1 + item2 + item3
+ */
+package lab1_extra;
+
+import java.util.Scanner;
+
+public class task5 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("A customer buys 3 items:\n" +
+"Item 1: 120 BDT\n" +
+"Item 2: 250 BDT\n" +
+"Item 3: 90 BDT");
+        
+        int item_1=120;
+        int item_2=250;
+        int item_3=90;
+        
+        
+        
+        int  total = (item_1+item_2+item_3);
+        
+        
+        
+        System.out.println("the total bill is  :"+ total);
+        
+                                         
+        
+    }
+    
+}
