@@ -1,0 +1,35 @@
+/* Convert Celsius to Fahrenheit
+Story:
+A weather app shows temperature in Celsius. Today it is 30°C. The user wants to convert it
+to Fahrenheit.
+Task:
+Write a Java program to convert temperature.
+Formula:
+F = (C × 9/5) + 32
+*/
+
+package lab1_extra;
+
+import java.util.Scanner;
+
+public class task4 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Today it is 30°C. The user wants to convert it");
+        
+        double temp = 30 ;
+        
+        
+        double Fahrenheit= (temp*9/5)+32;
+        System.out.println("the temp in Fahrenheit :"+ Fahrenheit);
+        
+        
+                
+
+        
+        
+        
+        
+    }
+    
+}
