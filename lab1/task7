@@ -1,0 +1,30 @@
+/*
+ Salary Calculation
+Story:
+An employee earns 30,000 BDT per month. He gets a bonus of 15% of his salary.
+Task:
+Write a Java program to calculate total salary including bonus.
+Formula:
+Bonus = Salary × 15 / 100
+Total Salary = Salary + Bonus
+ */
+package lab1_extra;
+
+import java.util.Scanner;
+
+public class task7 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("An employee earns 30,000 BDT per month.\n He gets a bonus of 15% of his salary.\n");
+        
+        double Salary = 30000 ;
+        double rate= 15;
+        
+        double bonus=Salary*15/100;
+        double Total_Salary = bonus+Salary;
+                System.out.println("bonus  :"+ bonus+" BDT" );
+                System.out.println("Total Salary  :"+ Total_Salary + " BDT" );
+        
+    }
+    
+}
