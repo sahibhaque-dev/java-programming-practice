@@ -1,0 +1,26 @@
+/*. Area of a Rectangle
+Story:
+A farmer has a rectangular field. The length is 25 meters and width is 12 meters.
+Task:
+Write a Java program to calculate the area of the field.
+Formula:
+Area = length × width*/
+
+package lab1_extra;
+
+
+public class task_2 {
+    
+     public static void main(String[] args) {
+         System.out.println("A farmer has a rectangular field. \n The length is 25 meters and width is 12 meters");
+        int Area=25*12;
+        System.out.println("the Area of a Rectangle land of the farmer : " + Area );
+        
+                
+
+        
+
+
+    }
+    
+}
