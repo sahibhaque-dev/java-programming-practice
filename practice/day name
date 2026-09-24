@@ -1,0 +1,39 @@
+/*Day of the Week
+
+Take a number from 1–7 and print:
+
+1 → Sunday
+2 → Monday
+3 → Tuesday
+...
+7 → Saturday*/
+
+
+
+package ewu_sahib;
+import java.util.Scanner;
+
+
+public class task4 {
+      public static void main(String[] args){
+   Scanner sc = new Scanner(System.in); 
+   
+   System.out.print("plz input a day digit  : ");
+     int d = sc.nextInt();
+     switch(d)
+     {
+    case 1:System.out.println ("sunday");break;
+    case 2:System.out.println ("monday");break;
+    case 3:  System.out.println ("tuesday");break;
+    case 4:System.out.println ("wednesday");break;
+    case 5:System.out.println ("thursday");break;
+        case 6:System.out.println ("friday");break;
+            case 7:System.out.println ("saturday");break;
+    default:
+        System.out.println ("plz input digit from (1-7)");
+                }
+   sc.close();
+      }
+    
+    
+}
