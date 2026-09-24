@@ -1,0 +1,42 @@
+package ewu_sahib;
+import java.util.Scanner;
+
+public class task5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number  : ");
+        double a = sc.nextDouble();
+        
+                System.out.print("Enter operator (* ,+ ,-,/) : ");
+                char o =sc.next().charAt(0);
+System.out.print("plz enter the 2nd number : ");
+double b = sc.nextDouble();
+
+double rejult ;
+
+switch (o){
+    case'+':
+        rejult=a+b;
+        System.out.println(a + "+" + b + "= " + rejult);break;
+     case'-':
+         rejult =a-b;
+        System.out.println(a + "-" + b + "= " + rejult);break;
+     case'*':
+         rejult=a*b;
+        System.out.println(a + "*" + b + "= " + rejult);break;
+        case'/':
+            rejult=a/b;
+        System.out.println(a + "/" + b + "= " + rejult);break;
+        
+        default:
+           System.out.println ("plz enter correct operator (* ,+ ,-,/) !!!! ");
+         
+}
+
+
+       
+
+        sc.close();
+    }
+}
