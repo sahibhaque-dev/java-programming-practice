@@ -1,0 +1,21 @@
+//Write a program that prompts the user to enter the seconds, and display the hours, minutes and seconds for the input
+//seconds. Here is a sample run:
+package lab_1;
+import java.util.Scanner;
+public class task3 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            
+        System.out.print("plz enter the total minute:  ");
+        int m = sc.nextInt();
+        
+        int years = m/(60*24*365);
+        int days = (m%(60*24*365))/(60*24);
+
+        System.out.println("years: " + years);
+        System.out.println("days: " + days);
+        
+    }
+    
+}
