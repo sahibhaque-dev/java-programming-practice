@@ -1,0 +1,23 @@
+//Write a program that prompts the user to enter the seconds, and display the hours, minutes and seconds for the input
+//seconds. Here is a sample run:
+package lab_1;
+
+import java.util.Scanner;
+
+public class task4 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print(" enter  temperature in Fahrenheit : ");
+        double fahrenheit = sc.nextDouble();
+
+        double celsius = (5.0 / 9) * (fahrenheit - 32);
+
+        System.out.println(fahrenheit + " Fahrenheit is equal to "
+                + celsius + "celsius");
+        sc.close();
+    }
+
+}
