@@ -1,0 +1,41 @@
+// exchange rate from currency in U.S. dollars (USD) to 
+//Bangladeshi Taka (BDT)
+
+
+package lab_1;
+import java.util.Scanner;
+
+public class task9 {
+    public static void main(String[] args){
+    
+        Scanner sc = new Scanner(System.in);
+     
+        System.out.print("Please enter the number (1 or 0 ): ");
+        
+        int a = sc.nextInt();
+        
+        if (a == 1){
+            
+            
+            System.out.print("Please enter the amount in bdt : ");
+            double bdt = sc.nextInt();
+            
+            double con_dollar = bdt / 121;
+            System.out.print("the amount in dollar : " + con_dollar+" dollar ");
+            
+            
+        } 
+        
+        else {
+            System.out.print("Please enter the amount in dollar : ");
+            double dollar = sc.nextInt();
+            
+            double con_bdt = dollar * 121;
+            System.out.print("the amount in bdt : " + con_bdt+" bdt ");
+        }
+        
+        
+        
+        sc.close();
+    }
+}
