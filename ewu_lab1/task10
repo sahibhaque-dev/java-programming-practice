@@ -1,0 +1,42 @@
+package lab_1;
+
+import java.util.Scanner;
+
+public class task10 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("plz enter the radius of the circle : ");
+
+        int r = sc.nextInt();
+        System.out.println("plz enter the center (p.q)  ");
+        System.out.print("plz enter p :   ");
+        int p = sc.nextInt();
+        System.out.print("plz enter q :   ");
+        int q = sc.nextInt();
+
+        System.out.println("plz  enter a point (x, y)   ");
+        System.out.print("plz enter x  :   ");
+        int x = sc.nextInt();
+        System.out.print("plz enter y :   ");
+        int y = sc.nextInt();
+
+        double distance = Math.sqrt(Math.pow(x - p, 2) + Math.pow(y - q, 2));
+
+        if (distance < r) {
+            System.out.println("the point is insid e the circle ");
+
+        } else if (distance == r) {
+            System.out.println(" the point is on \n"
+                    + "the circle ");
+
+        } else if (distance > r) {
+            System.out.println("the point is outside the circle ");
+        }
+
+        sc.close();
+    }
+
+}
