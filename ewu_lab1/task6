@@ -1,0 +1,22 @@
+package lab_1;
+import java.util.Scanner;
+
+public class task6 {
+    public static void main(String[] args){
+    
+        Scanner sc = new Scanner(System.in);
+     
+        System.out.print("Please enter a number: ");
+        int a = sc.nextInt();
+      
+        boolean value = (a % 2 == 0) ^ (a % 3 == 0);
+        
+        if (value) {
+            System.out.println("TRUE");
+        } else {
+            System.out.println("FALSE");
+        }
+
+        sc.close();
+    }
+}
