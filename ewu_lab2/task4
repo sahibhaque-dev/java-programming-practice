@@ -1,0 +1,29 @@
+package lab2;
+import java.util.Scanner;
+public class task4 {
+    public static void main(String [] args ){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("plz enter the number : ");
+        int n = sc.nextInt();
+        n=Math.abs(n);
+         int temp=0;
+         int copy_n=n;
+        while(n!=0){
+            int digit =n%10;
+           temp=temp*10+digit;
+           n/=10;
+                    
+        }
+        
+        if(temp==copy_n){
+                    System.out.print(copy_n +" is a palindrom  ");
+
+        }else{
+             System.out.print(copy_n +" is not a palindrom  ");
+ 
+        }
+         
+    }
+    
+}
