@@ -1,0 +1,45 @@
+package lab2;
+import java.util.Scanner;
+public class task6 {
+    public static void main(String [] args ){
+        
+        Scanner sc = new Scanner(System.in);
+       
+        System.out.println("plz enter 2 integer number " );
+                System.out.print("plz enter 1st  integer number :" );
+
+        int a = sc.nextInt();
+        System.out.print("plz enter 2nd  integer number :" );
+        int b = sc.nextInt();
+        
+        int a1=a;
+        int b1=b;
+        
+        
+
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        
+        
+       int lcm; 
+        for (int j=1; ;j++){
+            
+            int multi=a1*j;
+            if(multi%b1==0){
+                 lcm =multi;
+                break;
+            }
+            
+        }
+        
+      System.out.println("LCM  is : " + lcm  );
+
+
+        System.out.println("GCD is : " + a);
+        
+        
+    }
+}
