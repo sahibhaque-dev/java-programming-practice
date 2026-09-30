@@ -1,0 +1,27 @@
+package lab2;
+import java.util.Scanner;
+public class task2 {
+    public static void main(String [] args ){
+         Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+
+        System.out.println("Enter integers to find the average (0 to stop):");
+        int num = sc.nextInt();
+
+        while (num != 0) {
+            sum += num;
+            count++;
+            num = sc.nextInt();
+        }
+
+        if (count == 0) {
+            System.out.println("No numbers entered.");
+        } else {
+            System.out.println("Total numbers entered: " + count);
+            System.out.println("Average: " + (double) sum / count);
+        }
+        sc.close();
+    }
+    
+}
