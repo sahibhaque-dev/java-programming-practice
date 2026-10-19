@@ -1,0 +1,62 @@
+
+package lab3;
+import java.util.*;
+
+public class task7 {
+    
+    public static void main (String [] args){
+        
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("plz input the size of row and coloum ");
+        int r = sc.nextInt();
+        int c = sc.nextInt();
+        
+        
+        int [][]matrix = new int [r][c];
+      
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                System.out.print("plz input the value of ["+(i+1)+"]"+"["+(j+1)+"] :");
+
+                matrix[i][j]=sc.nextInt();
+            }
+        }
+        
+        diagonalSum(matrix);
+        //System.out.println("the rejult 1st diagonal : "+ rejult );
+        int rejult2 = diagonalSum2(matrix);
+        System.out.println("the rejult 2nd  diagonal : "+ rejult2 );
+
+        
+        sc.close();
+    }
+    
+    public static void  diagonalSum(int[][] matrix) {
+
+        int n = matrix.length;
+        int sum = 0;
+
+         for (int i = 0; i < n; i++) {
+            sum += matrix[i][i];
+
+        }
+
+        System.out.println("the rejult 1st nusrat : " + sum );
+    }
+    
+    
+    public static int diagonalSum2(int[][] matrix) {
+
+        int n = matrix.length;
+        int sum = 0;
+
+         for (int i = 0; i < n; i++) {
+            sum += matrix[i][n-1-i];
+
+        }
+
+        return sum;
+    }
+}
+
