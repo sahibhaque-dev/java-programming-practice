@@ -1,0 +1,49 @@
+
+package lab3;
+
+import java.util.*;
+public class task6 {
+    public static void main (String [] args){
+        
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("plz input the row and colum size of the matrix : ");
+        
+        int r =sc.nextInt();
+        int c =sc.nextInt();
+        
+        int [][] arr = new int [r][c];
+        
+        
+        for (int i =0 ; i<r;i++){
+           for (int j=0 ; j<c;j++){
+               System.out.print("plz input the value of ["+(i+1)+"]"+"["+(j+1)+"] :");
+                arr[i][j]=sc.nextInt();
+           }
+        }
+        
+       int max = arr[0][0];
+        int ma = 0, mb = 0;
+        for (int i =0 ; i<r;i++){
+           for (int j=0 ; j<c;j++){
+               
+               if(arr[i][j]>max){
+                   max=arr[i][j];
+                   ma=i;
+                   mb=j;
+               }
+           }
+           
+        }
+        
+        
+        System.out.println("miximum element : "+max);
+        System.out.println("Index: [" + ma + "][" + mb + "]");
+        
+        
+        
+        sc.close();
+    }
+    
+}
