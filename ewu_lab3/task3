@@ -1,0 +1,60 @@
+package lab3;
+
+import java.util.*;
+
+public class task3 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the number of student : ");
+        int n = sc.nextInt();
+         System.out.print("\n");
+
+        int[] score = new int[n];
+        System.out.print("enter " + n + " score :");
+        for (int i = 0; i < n; i++) {
+            score[i] = sc.nextInt();
+        }
+        max(score);
+        low(score);  
+
+    }
+
+    public static void  max(int[] score){
+        int max = score[0];
+        int p = 0;
+        int n = score.length;
+        for (int i = 1; i < n; i++) {
+            if (score[i] > max) {
+                max = score[i];
+                p = i;
+                
+                
+   
+            }
+        }
+        System.out.println("Highest Value: " + max + " at Index:" + p);
+    }
+    
+    public static void  low(int[] score){
+        int low = score[0];
+        int p2 = 0;
+         int n = score.length;
+        for (int i = 1; i < n; i++) {
+            if (score[i] < low) {
+                low = score[i];
+                p2 = i;
+            }   
+ 
+        }
+        System.out.println("Lowest  Value: " + low + " at Index:" + p2);
+        
+        
+        
+    }
+}
+    
+    
+        
+   
+    
