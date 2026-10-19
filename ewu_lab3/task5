@@ -1,0 +1,46 @@
+package lab3;
+
+import java.util.*;
+
+public class task5 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of student : ");
+        int n = sc.nextInt();
+
+        String[] s = new String[n];
+        int[] m = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter name of the  student" + (i + 1) + ": ");
+            s[i] = sc.next();
+            System.out.print("Enter the score of " + s[i] + ": ");
+            m[i] = sc.nextInt();
+        }
+
+        System.out.println("Students in decreasing order of scores:");
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (m[j] < m[j + 1]) {   
+                    int temp = m[j];
+                    m[j] = m[j + 1];
+                    m[j + 1] = temp;
+
+                    String temp2 = s[j];
+                    s[j] = s[j + 1];
+                    s[j + 1] = temp2;
+                }
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(s[i] + "-" + m[i]);
+
+        }
+
+        sc.close();
+    }
+
+}
