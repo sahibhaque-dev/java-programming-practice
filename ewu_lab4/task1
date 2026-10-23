@@ -1,0 +1,32 @@
+
+package lab4;
+
+
+class Programming {
+
+    Programming() {
+        System.out.println("I love programming languages");
+    }
+
+    Programming(String language) {
+        System.out.println("I love " + language);
+    }
+    
+    Programming(String language,int a ) {
+        System.out.println("I love " + language+a+"times");
+    }
+}
+
+public class task1 {
+    public static void main (String [] args ){
+        
+        Programming p1 = new Programming();
+        Programming p2 = new Programming("Java");
+        Programming p3 = new Programming();
+       Programming p4 = new Programming("u ",3000);
+
+        
+        
+        
+    }   
+}
