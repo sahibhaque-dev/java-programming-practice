@@ -1,0 +1,59 @@
+package lab5;
+
+class book {
+    
+    String author ,attributes;
+    
+    public book (String a , String b ){
+        this.author=a;
+        this.attributes=b;
+        
+    }
+    
+    
+}
+
+class library extends book {
+    int book_id;
+    boolean is_available;
+    
+    public library (String a , String b , int c){
+        super(a,b);
+        this.book_id=c;
+        this.is_available=true;
+        
+    }
+    
+    
+    void borrowBook( ){
+        
+        if(this.is_available==true){
+            this.is_available=false;
+            System.out.println("the book is borrowed done");
+            
+        }else
+             System.out.println("the book is not available ");
+
+            
+    }
+    
+    
+}
+
+
+public class task5 {
+    public static void main(String [] args ){
+        
+       library a= new library("sahib","mara khawa",123);
+       
+       a.borrowBook();
+        a.borrowBook();
+
+        
+        
+        
+        
+        
+    }
+    
+}
