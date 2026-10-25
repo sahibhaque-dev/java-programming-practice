@@ -1,0 +1,53 @@
+package lab5;
+
+class Shape {
+    String name;
+
+    public Shape(String name) {
+        this.name = name;
+    }
+
+    double area() {
+        return 0;
+    }
+}
+
+class Rectangle extends Shape {
+    double length;
+    double width;
+
+    Rectangle(double length, double width) {
+        super("Rectangle");
+        this.length = length;
+        this.width = width;
+    }
+
+    
+    double area() {
+        return length * width;
+    }
+}
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double radius) {
+        super("Circle");
+        this.radius = radius;
+    }
+
+    @Override
+    double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class task4 {
+    public static void main(String[] args) {
+        Rectangle r = new Rectangle(5, 4);
+        Circle H = new Circle(3);
+
+        System.out.println(r.name + " area: " + r.area());
+        System.out.println(H.name + " area: " + H.area());
+    }
+}
