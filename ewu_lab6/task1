@@ -1,0 +1,127 @@
+package lab6;
+
+import java.util.*;
+
+interface Vehicle {
+    void changeGear(int gear);
+ 
+    void speedUp(int  increment);
+ 
+    void applyBreak(int decrement);
+}
+
+class Bicycle implements Vehicle {
+    int speed = 0;
+    int gear = 1;
+ 
+    @Override
+    public void changeGear(int gear) {
+        this.gear = gear;
+        System.out.println("Bicycle gear changed to: " + gear);
+    }
+ 
+    @Override
+    public void speedUp(int increment) {
+        speed += increment;
+        System.out.println("bicycle speed increased to : " + speed + "km/h");
+    }
+ 
+    @Override
+    public void applyBreak(int decrement) {
+        speed -= decrement;
+        if (speed < 0)           
+        speed = 0;
+        
+        System.out.println("Bicycle speed decreased  to : " + speed + " km/h");
+        
+    }
+}
+ 
+class Bike  implements Vehicle {
+    
+    int speed = 0;
+    int gear = 1;
+ 
+    @Override
+    public void changeGear(int gear) {
+        
+        this.gear = gear;
+        System.out.println("Bike gear changed to: " + gear);
+    }
+ 
+       @Override
+    public void speedUp(int increment) {
+        
+        speed += increment;
+        System.out.println("bbike speed increased to: " + speed + " km/h");
+    }
+ 
+    
+    @Override
+    public void applyBreak(int decrement) {
+        speed -= decrement;
+        if (speed < 0) 
+           speed = 0;
+        System.out.println("bike speed decreased to: " + speed + " km/h");
+        
+    }
+}
+ 
+class Car implements Vehicle {
+    int speed = 0;
+    int gear = 1;
+ 
+    @Override
+    public void changeGear(int gear) {
+        this.gear = gear;
+        System.out.println("Car gear  changd to: " + gear);
+    }
+ 
+    @Override
+    public void speedUp(int increment) {
+        speed += increment;
+        System.out.println("Car speed increased to: " + speed + " km/h");
+    }
+ 
+    @Override
+    public void applyBreak(int decrement) {
+        speed -= decrement;
+        if (speed < 0) 
+            speed = 0;
+        System.out.println("car sped decreased to : " + speed + " km/h");
+        
+        
+    }
+}
+
+public class task1 {
+
+    public static void main(String[] args) {
+        
+        Vehicle car = new Car() ;
+        Vehicle bicycle = new Bicycle() ;
+        Vehicle bike = new Bike() ;
+        
+        car.changeGear(3);
+        car.speedUp(60);
+        car.applyBreak(20);
+ 
+        System.out.println();
+ 
+        bicycle.changeGear(2);
+        bicycle.speedUp(15);
+        bicycle.applyBreak(50);
+ 
+        System.out.println();
+ 
+        bike.changeGear(4);
+        bike.speedUp(80);
+        bike.applyBreak(30);
+        
+        
+        
+        
+
+    }
+
+}
