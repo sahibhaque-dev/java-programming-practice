@@ -1,0 +1,78 @@
+package lab6;
+
+interface Shape {
+    
+    
+    void draw();
+    
+    void area();
+    void perimeter();
+}
+
+class Rectangle implements Shape {
+    double length;
+    double width;
+
+    public Rectangle(double a, double b) {
+        length = a;
+        width = b;
+    }
+
+    @Override
+    public  void draw() {
+        System.out.println("drawing a  rectanglec");
+    }
+
+    @Override
+    public void area() {
+        System.out.printf("erea  : %.2f%n", length * width);
+    }
+
+    @Override
+    public void perimeter() {
+        System.out.printf("perimeter  : %.2f%n", 2 * (length + width));
+    }
+}
+
+class Circle implements Shape {
+    double radius,PI=3.1416;
+    
+
+    public Circle(double r) {
+        radius = r;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("drawing a circle  ");
+    }
+
+    @Override
+    
+    
+    
+    public void area() {
+        System.out.printf("area : %.2f%n",  PI* radius*radius);
+    }
+
+    
+    @Override
+    public void perimeter() {
+        System.out.printf("perimeter : %.2f%n", 2 *PI*radius);
+    }
+}
+
+public class task2 {
+    public static void main(String[] args) {
+        Shape r = new Rectangle(5, 3);
+        r.draw();
+        r.area();
+        r.perimeter();
+
+        Shape c = new Circle(4);
+        System.out.println("\n");
+        c.draw();
+        c.area();
+        c.perimeter();
+    }
+}
