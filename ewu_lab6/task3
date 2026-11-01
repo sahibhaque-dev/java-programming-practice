@@ -1,0 +1,49 @@
+package lab6;
+
+interface bonus {
+    double calculateBonus(double salary);
+}
+
+class manager implements bonus {
+    String name, type;
+    int salary;
+
+    public manager(String a, String b, int c) {
+        this.name = a;
+        this.type = b;
+        this.salary = c;
+    }
+
+    public double calculateBonus(double salary) {
+        double result = salary * 0.20;
+        return result;
+    }
+}
+
+class Developer implements bonus {
+    String name, type;
+    int salary;
+
+    public Developer(String a, String b, int c) {
+        this.name = a;
+        this.type = b;
+        this.salary = c;
+    }
+
+    public double calculateBonus(double salary) {
+        double result = salary * 0.10;
+        return result;
+    }
+}
+
+public class task3 {
+    public static void main(String[] args) {
+        
+        
+        manager m = new manager("sahib", "manager", 5000);
+        System.out.println("the  bonus of " + m.name + " is = " + m.calculateBonus(m.salary));
+
+        Developer d = new Developer("raisa ", "developer", 4200);
+        System.out.println("the bonus of " + d.name + " is = " + d.calculateBonus(d.salary));
+    }
+}
