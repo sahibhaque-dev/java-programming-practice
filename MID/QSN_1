@@ -1,0 +1,81 @@
+package ewu_sahib;
+//You are a software developer working for Power Up Bangladesh, an electricity provider that wants to digitize its billing system. Your manager has asked you to build a Java application that can calculate monthly electricity bills for customers based on their consumption and payment status. To complete your task:
+//Create a class named ElectricityBill that models a customer's bill. This class should:
+//Store the customer’s name, units consumed, payment status, and bill amount
+//Use a constructor to initialize customer details
+//Contain a method called calculateBill() that:
+//Calculates the energy charge based on unit slabs
+//Adds a fixed charge of 30.00 BDT
+//Applies 5% VAT
+//Adds a 2% penalty if the payment is late
+//Include a method displayBill() to neatly print out all the details
+//Billing Rules:
+//Electricity Tariff (per unit):
+//0–75 units: 4.00 BDT
+//76–200 units: 5.45 BDT
+//201–300 units: 5.70 BDT
+//301+ units: 9.30 BD
+
+class ElectricityBill {
+    public  String name;
+    public int units;
+    public boolean paidLate;
+    public double energyCharge;
+    public double vat;
+    public double penalty;
+    public double billAmount;
+
+    private static final double FIXED_CHARGE = 30.00;
+
+    public ElectricityBill(String name, int units, boolean paidLate) {
+        this.name = name;
+        this.units = units;
+        this.paidLate = paidLate;
+    }
+
+    public void calculateBill() {
+        energyCharge = 0;
+        if (units <= 75) {
+            energyCharge = units * 4.00;
+        } else if (units <= 200) {
+            energyCharge = units*4.00 ;
+        } else if (units <= 300) {
+            energyCharge = units * 5.45 ;
+        } else {
+            energyCharge = units * 9.30;
+        }
+
+        double subtotal = energyCharge + FIXED_CHARGE;
+        vat = subtotal * 0.05;
+        billAmount = subtotal + vat;
+
+        penalty = 0;
+        if (paidLate) {
+            penalty = billAmount * 0.02;
+            billAmount += penalty;
+        }
+    }
+
+    public void displayBill() {
+        System.out.println("Customer       : " + name);
+        System.out.println("Units consumed : " + units);
+        System.out.println("Payment status : " + (paidLate ? "Late" : "On time"));
+        System.out.printf("Energy charge  : %.2f BDT%n", energyCharge);
+        System.out.printf("Fixed charge   : %.2f BDT%n", fIXED_CHARGE);
+        System.out.printf("VAT (5%%)       : %.2f BDT%n", vat);
+        System.out.printf("Late penalty   : %.2f BDT%n", penalty);
+        System.out.printf("Total bill     : %.2f BDT%n", billAmount);
+    }
+
+    public static void main(String[] args) {
+        ElectricityBill bill1 = new ElectricityBill("sahib", 225, false);
+        bill1.calculateBill();
+        bill1.displayBill();
+
+        System.out.println();
+
+        ElectricityBill bill2 = new ElectricityBill("jafir", 255, true);
+        bill2.calculateBill();
+        bill2.displayBill();
+    }
+}
