@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class AgeException extends Exception {
+
+    public AgeException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+
+        try {
+
+            if (age < 18) {
+                throw new AgeException(
+                    "Age is less than 18. You are not eligible!"
+                );
+            }
+
+            else {
+                System.out.println("You are eligible.");
+            }
+        }
+
+        catch (AgeException e) {
+
+            System.out.println(
+                "Caught Exception: " + e.getMessage()
+            );
+        }
+    }
+}
