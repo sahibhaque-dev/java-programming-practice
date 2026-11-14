@@ -1,0 +1,99 @@
+package lab7;
+import java.io.*;
+import java.util.*;
+
+class Calculator {
+    int num1, num2;
+
+    public Calculator(int a, int b) {
+        num1 = a;
+        num2 = b;
+    }
+
+    void Add() {
+        try {
+            if (num1 < 0 || num2 < 0) {
+                throw new ArithmeticException(" number must be positive for addition ");
+            }
+            System.out.println(" Addition = " + (num1 + num2));
+        } catch (ArithmeticException e) {
+            System.out.println("Addition Error: " + e.getMessage());
+        }
+    }
+
+    void Subtract() {
+        try {
+            if (num1 < 0 || num2 < 0) {
+                throw new ArithmeticException(" Number must be positive for subtraction ");
+            }
+            System.out.println("Subtraction = " + (num1 - num2));
+        } catch (ArithmeticException e) {
+
+            System.out.println("Subtraction Error : " + e.getMessage());
+        }
+    }
+
+    void multiply() {
+        try {
+            if (num1 == 0 || num2 == 0) {
+                throw new ArithmeticException(" Numbers must not be 0  for multiplication ");
+            }
+            System.out.println(" Multiplication = " + (num1 * num2));
+            
+        } catch (ArithmeticException e) {
+            System.out.println("Multiplication Error: " + e.getMessage());
+        }
+    }
+
+    void Division() {
+        try {
+            if (num1 == 0 || num2 == 0) {
+                throw new ArithmeticException("Numbers must not be zero for division.");
+            }
+            System.out.println("Division = " + ((double) num1 / num2));
+        } catch (ArithmeticException e) {
+            System.out.println("Division Error: " + e.getMessage());
+        }
+    }
+}
+
+public class task5 {
+    
+    static int readInt(Scanner sc, String label) {
+        System.out.print(label);
+        return Integer.parseInt(sc.next());
+    }
+    
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        
+
+
+        try {
+            System.out.println("Enter two integers for addition:");
+            Calculator obj1 = new Calculator(readInt(sc, "enter a : "), readInt(sc, "enter b : "));
+            obj1.Add();
+
+            System.out.println("Enter two integers for subtraction:");
+            Calculator obj2 = new Calculator(readInt(sc, "enter a : "), readInt(sc, "enter b : "));
+            obj2.Subtract();
+
+            System.out.println("Enter two integers for multiplication:");
+            Calculator obj3 = new Calculator(readInt(sc, "enter a : "), readInt(sc, "enter b : "));
+            obj3.multiply();
+
+            System.out.println("Enter two integers for division:");
+            Calculator obj4 = new Calculator(readInt(sc, "enter a : "), readInt(sc, "enter b : "));
+            obj4.Division();
+
+        } catch (NumberFormatException e) {
+            System.out.println("Wrong input , Plz enter integer values only ");
+        } finally {
+            sc.close();
+        }
+    }
+}
+
+
