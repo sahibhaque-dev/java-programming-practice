@@ -1,0 +1,47 @@
+package lab7;
+import java.io.*;
+import java.util.*;
+
+
+
+class MyException extends Exception {
+    
+    public MyException( String a ){
+        super (a);
+    }
+}
+    
+    
+    
+  class product {
+
+    void productCheck(int weight) throws MyException {
+        if (weight < 100) {
+            throw new MyException("Product is invalid");
+        } else {
+            System.out.println("Product weight = " + weight);
+        }
+    }
+ }
+   
+
+
+public class task6 {
+    
+    public  static void main (String []  args ){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("plz enter the weight of the product : ");
+        int w = sc.nextInt();
+        
+        product p = new product();
+        
+        try{
+        p.productCheck(w);
+        }catch (MyException x){
+            System.out.println("plz enter valid weight product . "+ x.getMessage());
+        }
+        
+        
+        
+    } 
+}
