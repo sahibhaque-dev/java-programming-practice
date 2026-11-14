@@ -1,0 +1,24 @@
+package lab7;
+
+import java.util.Scanner;
+
+public class task3 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("enter a number : ");
+        String str = sc.nextLine();
+
+        try {
+            int number = Integer.parseInt(str);
+
+            System.out.println("Converted Integer: " + number);
+        }
+        catch (NumberFormatException x) {
+            System.out.println("Error: Invalid number format!"+x);
+        }
+
+        sc.close();
+    }
+}
