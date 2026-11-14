@@ -1,0 +1,25 @@
+package lab7;
+import java.util.*;
+
+public class task2 {
+    public static void main (String [] args ){
+        
+        
+        Scanner sc = new Scanner (System.in);
+       int[] sahib = new int[5];
+         sahib = new int[]{10, 20, 30, 40, 50};
+        try {
+            
+            System.out.println(sahib[9]);
+                    
+                   
+        }catch(ArrayIndexOutOfBoundsException  e){
+              System.out.println("you enter wrong   index number ,  can not be done "+e);
+
+            
+        }
+        
+  
+    }
+    
+}
