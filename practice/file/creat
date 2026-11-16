@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+
+public class task1 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("plz enter the file name ");
+        String a = sc.nextLine();
+
+        try {
+            File sahib = new File(a);
+            sahib.createNewFile();
+            System.out.println("File created");
+        } catch (IOException e) {
+            System.out.println("File create korte problem hoyeche");
+        }
+    }
+}
