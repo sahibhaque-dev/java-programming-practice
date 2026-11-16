@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+public class task2 {
+    public static void main(String[] args) {
+
+        try {
+            File sahib = new File("sahib.txt");
+            sahib.createNewFile();
+            System.out.println("File created");
+
+            File sahib2 = new File("C:/Users/DELL/Downloads/sahib.khan");
+            sahib2.mkdir();
+            System.out.println("Folder created");
+
+            FileWriter lekha = new FileWriter("sahib.txt");
+            lekha.write("hello madam , kmn acho ");
+            lekha.close();
+            System.out.println("lekha sesh madam ");
+
+        } catch (IOException e) {
+            System.out.println("File create korte problem hoyeche");
+        }
+    }
+}
